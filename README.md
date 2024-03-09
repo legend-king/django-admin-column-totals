@@ -35,3 +35,13 @@ class TestModelAdmin(ModelAdminTotals):
 
 
 Make sure to at least have the columns of list_totals in list_display.
+
+
+For related fields,
+It should be passed as follows in list_totals and list_display
+```
+list_display=('col_a','col_b', 'col_b_value')
+list_totals = [('col_b__value', Sum)]
+```
+
+In List Display a function needs to be created for assigning the value whereas, in list_totals it can be passed with Double Underscore (__)
