@@ -5,13 +5,20 @@ Installation
 virtualenv .
 source bin/activate
 Or
-pip install git+https://github.com/douwevandermeij/admin-totals.git
+pip install git+https://github.com/legend-king/django-admin-column-totals/
+
 Usage
+
+
 In settings.py
 
 INSTALLED_APPS = [
+
     'admin_column_totals',
+    
 ]
+
+
 In admin.py:
 
 from admin_column_totals.admin import ModelAdminTotals
@@ -23,4 +30,5 @@ from .models import TestModel
 class TestModelAdmin(ModelAdminTotals):
     list_display = ['name', 'value']
     list_totals = [('value', Sum), ('value', Min), ('value', Avg), ('value', Max), ('value', Count)]
+    
 Make sure to at least have the columns of list_totals in list_display.
