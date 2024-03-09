@@ -31,6 +31,7 @@ class TestModelAdmin(ModelAdminTotals):
     list_display = ['name', 'value']
     list_totals = [('value', Sum), ('value', Min), ('value', Avg), ('value', Max), ('value', Count)]
 ```
+![image](https://github.com/legend-king/django-admin-column-totals/assets/72150465/1db74e64-79bc-422d-89c8-6c193733b5e9)
 
 
 Make sure to at least have the columns of list_totals in list_display.
