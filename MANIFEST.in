@@ -1,0 +1,2 @@
+include README.md
+recursive-include admin_column_totals/templates *
