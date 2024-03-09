@@ -14,6 +14,7 @@ class CalculateTotals(ChangeList):
             list_totals_dict = dict(self.model_admin.list_totals)
             list_totals = self.model_admin.list_totals
             for field in self.list_display:
+                field = field.replace('_','.')
                 if field in list_totals_dict:
                     summary=""
                     total_summary=""
