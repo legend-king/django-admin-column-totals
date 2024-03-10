@@ -40,8 +40,8 @@ Make sure to at least have the columns of list_totals in list_display.
 For related fields,
 It should be passed as follows in list_totals and list_display
 ```
-list_display=('col_a','col_b', 'col_b_value')
+list_display=('col_a','col_b', 'col_b__value')
 list_totals = [('col_b__value', Sum)]
 ```
 
-In List Display a function needs to be created for assigning the value whereas, in list_totals it can be passed with Double Underscore (__)
+In list_display and list_totals the correct value should come for related field with __
